@@ -98,7 +98,7 @@ server {
 }
 将 server_name 的值改为你的域名。
 
-用文本编辑器修改你的配置文件/home/wwwroot/xxx.com/config.js，查找production: { ，直接找到url,修改为url:'http://xxx.com'如下：
+#####用文本编辑器修改你的配置文件/home/wwwroot/xxx.com/config.js，查找production: { ，直接找到url,修改为url:'http://xxx.com'如下：
 
 config = {
     // ### Production
@@ -116,6 +116,7 @@ config = {
         },
 接着输入命令
 service nginx restart
+
 如果不行的话，请重启主机。接着在命令行输入cd /home/wwwroot/xxx.com/后在输入npm start再输入forever start index.js
 这样就完成了。
 
