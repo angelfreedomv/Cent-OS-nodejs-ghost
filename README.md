@@ -158,8 +158,7 @@ Linux 系统在启动的时候会运行初始化脚本。这些脚本通常存�
 
 使用以下命令创建 /etc/init.d/ghost 文件：
 ```
-$ sudo curl https://raw.github.com/TryGhost/Ghost-Config/master/init.d/ghost \
-  -o /etc/init.d/ghost
+$ sudo curl https://raw.github.com/TryGhost/Ghost-Config/master/init.d/ghost   -o /etc/init.d/ghost
   ```
 使用 nano /etc/init.d/ghost 命令打开文件并检查以下内容：
 
