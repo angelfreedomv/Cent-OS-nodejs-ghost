@@ -134,9 +134,9 @@ config = {
 Debian/Ubuntu： apt-get install supervisor
 Fedora： yum install supervisor
 ```
-其他大多数发行版： easy_install supervisor
-通过 service supervisor start 确保 Supervisor 运行
-为 Ghost 创建一个启动脚本。通常为 /etc/supervisor/conf.d/ghost.conf ，例如：
+其他大多数发行版： `easy_install supervisor`
+通过 `service supervisor start` 确保 Supervisor 运行
+为 Ghost 创建一个启动脚本。通常为 `/etc/supervisor/conf.d/ghost.conf `，例如：
 ```
 [program:ghost]
 command = node /path/to/ghost/index.js
@@ -154,13 +154,13 @@ environment = NODE_ENV="production"
 详细内容请参阅 Supervisor 文档。
 
 初始化脚本
-Linux 系统在启动的时候会运行初始化脚本。这些脚本通常存在于 /etc/init.d 。为了让 Ghost 一直运行下去甚至自动重启，你可以设置一个初始化脚本来完成这个任务。以下的例子工作在 Ubuntu ，并且在 Ubuntu 12.04 下测试通过。
+Linux 系统在启动的时候会运行初始化脚本。这些脚本通常存在于 `/etc/init.d `。为了让 Ghost 一直运行下去甚至自动重启，你可以设置一个初始化脚本来完成这个任务。以下的例子工作在 Ubuntu ，并且在 Ubuntu 12.04 下测试通过。
 
-使用以下命令创建 /etc/init.d/ghost 文件：
+使用以下命令创建 `/etc/init.d/ghost `文件：
 ```
 $ sudo curl https://raw.github.com/TryGhost/Ghost-Config/master/init.d/ghost   -o /etc/init.d/ghost
   ```
-使用 nano /etc/init.d/ghost 命令打开文件并检查以下内容：
+使用 `nano /etc/init.d/ghost` 命令打开文件并检查以下内容：
 
 将 GHOST_ROOT 变量的值更换为你的 Ghost 安装路径
 
@@ -187,7 +187,7 @@ $ sudo service ghost status
 $ sudo update-rc.d ghost defaults
 $ sudo update-rc.d ghost enable
 ```
-为了保证你的用户可以更改 Ghost 目录里的文件和默认的 config.js ，需要将你加入 ghost 用户组中： $ sudo adduser 你的用户名 ghost
+为了保证你的用户可以更改 Ghost 目录里的文件和默认的 config.js ，需要将你加入 ghost 用户组中：` $ sudo adduser 你的用户名 ghost`
 
 如果你现在重启你的服务器，Ghost 应该会自动运行。
 
