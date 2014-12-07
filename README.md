@@ -25,7 +25,7 @@ Node.js让这一切变为可能，其原理是对Google Chrome浏览器所用的
 你可以通过从 http://nodejs.org 下载 .tar.gz 存档或者是通过包管理器安装。你可以根据 这篇文章 的说明来从包管理器安装 Node
 通过在终端窗口中输入 `node -v `和 `npm -v`检查 Node 和 npm 是否安装成功
 安装并运行 Ghost
-登录到 <http://ghost.org>，然后点击蓝色的 'Download Ghost Source Code' 按钮
+登录到 http://ghost.org，然后点击蓝色的 'Download Ghost Source Code' 按钮
 在下载页，点击下载最新的 zip 压缩文件然后将文件解压到你想运行 Ghost 的地方
 如果你以 guest 身份登陆的 linux 或者以 SSH 远程连接只有终端，那么：
 
@@ -72,8 +72,9 @@ Forever (https://npmjs.org/package/forever)
 如果你已经让 Ghost 一直运行了，你也可以设置一个代理服务器让你的博客可以使用域名访问。以下的示例假定你的操作系统是 centos，使用 Nginx 作为你的Web服务器，已经使用以上任意一种方法让 Ghost 在后台运行。
 
 安装 lnmp(参考 http://lnmp.org/install.html)
-
-`wget -c http://soft.vpser.net/lnmp/lnmp1.1-full.tar.gz && tar zxf lnmp1.1-full.tar.gz && cd lnmp1.1-full && ./centos.sh`
+```
+wget -c http://soft.vpser.net/lnmp/lnmp1.1-full.tar.gz && tar zxf lnmp1.1-full.tar.gz && cd lnmp1.1-full && ./centos.sh
+```
 这个命令将会安装nginx并且设定好所有必需的目录和基础配置。
 
 配置你的站点
@@ -187,7 +188,8 @@ $ sudo service ghost status
 $ sudo update-rc.d ghost defaults
 $ sudo update-rc.d ghost enable
 ```
-为了保证你的用户可以更改 Ghost 目录里的文件和默认的 config.js ，需要将你加入 ghost 用户组中：` $ sudo adduser 你的用户名 ghost`
+为了保证你的用户可以更改 Ghost 目录里的文件和默认的 config.js ，需要将你加入 ghost 用户组中：  
+` $ sudo adduser 你的用户名 ghost`
 
 如果你现在重启你的服务器，Ghost 应该会自动运行。
 
