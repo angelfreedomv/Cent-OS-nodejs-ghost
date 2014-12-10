@@ -72,8 +72,9 @@ Forever (https://npmjs.org/package/forever)
 如果你已经让 Ghost 一直运行了，你也可以设置一个代理服务器让你的博客可以使用域名访问。以下的示例假定你的操作系统是 centos，使用 Nginx 作为你的Web服务器，已经使用以上任意一种方法让 Ghost 在后台运行。
 
 安装 lnmp(参考 http://lnmp.org/install.html)
-
-`wget -c http://soft.vpser.net/lnmp/lnmp1.1-full.tar.gz && tar zxf lnmp1.1-full.tar.gz && cd lnmp1.1-full && ./centos.sh`
+```
+wget -c http://soft.vpser.net/lnmp/lnmp1.1-full.tar.gz && tar zxf lnmp1.1-full.tar.gz && cd lnmp1.1-full && ./centos.sh
+```
 这个命令将会安装nginx并且设定好所有必需的目录和基础配置。
 
 配置你的站点
