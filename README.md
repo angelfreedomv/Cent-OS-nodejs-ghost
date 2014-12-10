@@ -10,7 +10,7 @@ Ghost构建于Node.js平台之上，支持0.10.*版本（最新稳定版）的No
 
 在你的本地计算机上运行Ghost其实很简单，前提是你已经安装了Node.js。
 
-什么是Node.js？参考网站：http://nodejs.org/
+什么是Node.js？参考网站：<http://nodejs.org/>
 Node.js是构建快速、扩展性良好并且高效的web应用的开发平台。在过去的20年间，web从一堆静态页面进化为能够支持复杂web应用（例如Gmail和facebook）的平台。而JavaScript这一编程语言是这一进程的推进剂。
 
 Node.js让我们具有了开发服务器端JavaScript程序的能力。而在以前，JavaScript只能在浏览器上运行，如果要开发服务器端的程序，就要使用PHP一类的编程语言了。如果能够用同一种开发语言来完成web应用的开发，这将是多么棒！并且，Node.js还赋予了前端开发工程师更大的能力。
@@ -39,7 +39,7 @@ Node.js让这一切变为可能，其原理是对Google Chrome浏览器所用的
 
 切换到刚才解压的 Ghost 文件夹目录下，可以复制到`/home/wwwroot/xxx.com/`下面。这是已经添加的虚拟主机（lnmp环境）
 
-$ cd /你的 Ghost 解压目录
+`$ cd /你的 Ghost 解压目录`
 输入以下命令安装 Ghost ：
 
 `npm install --production`
@@ -135,9 +135,9 @@ config = {
 Debian/Ubuntu： apt-get install supervisor
 Fedora： yum install supervisor
 ```
-其他大多数发行版： easy_install supervisor
-通过 service supervisor start 确保 Supervisor 运行
-为 Ghost 创建一个启动脚本。通常为 /etc/supervisor/conf.d/ghost.conf ，例如：
+其他大多数发行版： `easy_install supervisor`
+通过 `service supervisor start `确保 Supervisor 运行
+为 Ghost 创建一个启动脚本。通常为 `/etc/supervisor/conf.d/ghost.conf` ，例如：
 ```
 [program:ghost]
 command = node /path/to/ghost/index.js
@@ -162,7 +162,7 @@ Linux 系统在启动的时候会运行初始化脚本。这些脚本通常存�
 $ sudo curl https://raw.github.com/TryGhost/Ghost-Config/master/init.d/ghost \
   -o /etc/init.d/ghost
   ```
-使用 nano /etc/init.d/ghost 命令打开文件并检查以下内容：
+使用 `nano /etc/init.d/ghost` 命令打开文件并检查以下内容：
 
 将 GHOST_ROOT 变量的值更换为你的 Ghost 安装路径
 
